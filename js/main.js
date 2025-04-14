@@ -109,12 +109,6 @@ videoModal.addEventListener('hidden.bs.modal', function () {
     video.setAttribute('src', '');
 });
 
-function toggleSearch() {
-    var searchBar = document.getElementById('searchBar');
-    searchBar.classList.toggle('d-none');
-}
-
-
 function subscribeNewsletter() {
     const email = document.getElementById('newsletter-email').value;
     if (email.trim() === '') {
