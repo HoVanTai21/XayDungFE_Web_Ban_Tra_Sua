@@ -96,3 +96,32 @@
     
 })(jQuery);
 
+const videoModal = document.getElementById('videoModal');
+const video = document.getElementById('video');
+
+videoModal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    const videoSrc = button.getAttribute('data-src');
+    video.setAttribute('src', videoSrc + "?autoplay=1&modestbranding=1&rel=0");
+});
+
+videoModal.addEventListener('hidden.bs.modal', function () {
+    video.setAttribute('src', '');
+});
+
+function toggleSearch() {
+    var searchBar = document.getElementById('searchBar');
+    searchBar.classList.toggle('d-none');
+}
+
+
+function subscribeNewsletter() {
+    const email = document.getElementById('newsletter-email').value;
+    if (email.trim() === '') {
+        alert("Vui lòng nhập email của bạn!");
+    } else {
+        // Ở đây bạn có thể thêm xử lý gửi email hoặc gọi API
+        alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ gửi thông tin mới nhất tới email: " + email);
+        document.getElementById('newsletter-email').value = ''; // Clear input
+    }
+}

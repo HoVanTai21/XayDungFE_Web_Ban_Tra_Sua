@@ -138,16 +138,53 @@
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
-                            <button type="button" class="btn-play" data-bs-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                                <span></span>
-                            </button>
+                          <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src=https://www.youtube.com/embed/X3813uxhVWM?si=Wq64KQZXYtjq4KqX"
+                            data-bs-target="#videoModal">
+                            <span></span>
+                          </button>
+                        </div>
+                    </div>
+                    
+                    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                          <div class="modal-content bg-transparent border-0">
+                            <div class="modal-body p-0">
+                              <div class="ratio ratio-16x9">
+                                <iframe id="video" src="" title="YouTube video player"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowfullscreen>
+                                </iframe>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>                      
+                </div>
+            </div>
+        </div>
+        <!-- Video End -->
+
+        <!-- Video Modal Start -->
+        <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Video End -->
+        <!-- Video Modal End -->
+            
 
 
      <!-- Footer Start -->
@@ -160,10 +197,10 @@
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+84 123456789</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>milkteashop@gmail.com</p>
                     <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -187,8 +224,8 @@
                     <h4 class="text-primary mb-4">Bản tin</h4>
                     <p>Đăng ký nhận bản tin của chúng tôi để cập nhật thông tin mới</p>
                     <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
+                        <input id="newsletter-email" class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" required>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="subscribeNewsletter()">Đăng ký</button>
                     </div>
                 </div>
             </div>
@@ -214,6 +251,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    
 </body>
 
 </html>

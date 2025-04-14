@@ -122,30 +122,30 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-4">Bạn cần hỗ trợ gì, hãy nêu vấn đề tại đây</h3>
                     <p class="mb-4"></p>
-                    <form>
+                    <form action="https://formspree.io/f/maypkwzr" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
                                     <label for="name">Tên bạn</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                                     <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Tiêu để</label>
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                    <label for="subject">Tiêu đề</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
-                                    <label for="message">Tin nhăn</label>
+                                    <textarea class="form-control" name="message" placeholder="Leave a message here" id="message" style="height: 120px" required></textarea>
+                                    <label for="message">Tin nhắn</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -153,6 +153,7 @@
                             </div>
                         </div>
                     </form>
+                    
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100">
@@ -184,10 +185,10 @@
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+84 123456789</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>milkteashop@gmail.com</p>
                     <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -211,8 +212,8 @@
                     <h4 class="text-primary mb-4">Bản tin</h4>
                     <p>Đăng ký nhận bản tin của chúng tôi để cập nhật thông tin mới</p>
                     <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
+                        <input id="newsletter-email" class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" required>
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="subscribeNewsletter()">Đăng ký</button>
                     </div>
                 </div>
             </div>
