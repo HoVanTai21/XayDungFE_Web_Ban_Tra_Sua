@@ -110,6 +110,31 @@
 }
 
 /* kết thúc nút tìm kiếm  */
+/* Nút Mua */
+.btn-1 {
+  margin: 10px;
+  padding: 8px 25px;
+  text-align: center;
+  font-size: 18px;
+  color: #5fc15a;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #5ac166;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 0 #5ac15f;
+}
+
+.btn-1:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #5ac17e;
+}
+
+.btn-1:active {
+  transform: scale(0.9);
+}
+
+/* Kết thúc nút mua */
 /*** Spinner ***/
 #spinner {
   opacity: 0;
