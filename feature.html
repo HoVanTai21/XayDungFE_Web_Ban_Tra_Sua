@@ -41,7 +41,7 @@
     
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
                 <a href="index.html" class="navbar-brand">
                     <h1 class="nav-item nav-link" >Milk Tea Shop</h1>
@@ -65,9 +65,22 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
                     </div>
-                    <div class="border-start ps-4 d-none d-lg-block">
-                        <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
-                    </div>
+                    <!-- Nút tìm kiếm -->
+            <div class="search border-start ps-2">
+                <input checked="" class="checkbox" type="checkbox" />
+                <div
+                  class="mainbox d-flex flex-row-reverse align-items-center justify-content-center"
+                >
+                  <div class="iconContainer">
+                    <i class="fas fa-search search_icon"></i>
+                  </div>
+                  <input
+                    class="search_input"
+                    placeholder="tìm kiếm"
+                    type="text"
+                  />
+                </div>
+              </div>
                 </div>
             </nav>
         </div>
