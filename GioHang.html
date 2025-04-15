@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+    <title>Milk Tea Shop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,133 +34,89 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
-          <a href="index.html" class="navbar-brand">
-            <h1 class="nav-item nav-link">Milk Tea Shop</h1>
-          </a>
-          <button
-            type="button"
-            class="navbar-toggler ms-auto me-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto">
-              <a href="index.html" class="nav-item nav-link">Trang chủ</a>
-              <a href="about.html" class="nav-item nav-link">Giới thiệu</a>
-              <a href="product.html" class="nav-item nav-link">Sản phẩm</a>
-              <a href="store.html" class="nav-item nav-link">Cửa hàng</a>
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle active"
-                  data-bs-toggle="dropdown"
-                  >Trang</a
-                >
-                <div class="dropdown-menu bg-light rounded-0 m-0">
-                  <a href="feature.html" class="dropdown-item">Đặc trưng</a>
-                  <a href="blog.html" class="dropdown-item">Bài viết </a>
-                  <a href="testimonial.html" class="dropdown-item"
-                    >Lời nhận xét</a
-                  >
-                  <a href="GioHang.html" class="dropdown-item">Giỏ hàng</a>
-                </div>
-              </div>
-              <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
-            </div>
-            <!-- Nút tìm kiếm -->
-            <div class="search border-start ps-2">
-              <input checked="" class="checkbox" type="checkbox" />
-              <div
-                class="mainbox d-flex flex-row-reverse align-items-center justify-content-center"
-              >
-                <div class="iconContainer">
-                  <i class="fas fa-search search_icon"></i>
-                </div>
-                <input
-                  class="search_input"
-                  placeholder="tìm kiếm"
-                  type="text"
-                />
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- Navbar End -->
-    <section data-wow-delay="0.2s">
-      <div class="container-fluid">
-        <div class="row my-5">
-          <div class="col-lg-7 col-md-5">
-            <div class="row shadow my-3">
-              <div class="col-lg-4 col-md-4 col-sm-4 img-fluid my-2">
-                <img src="./img/about-2.jpg" class="img-fluid" alt="" />
-              </div>
-              <div class="col-lg-5 col-md-8 col-sm-8">
-                <h2>Trà sữa trân châu Matcha</h2>
-                <h6 class="text-muted">Số lượng: 1</h6>
-                <p>Giá: 30.000 VNĐ</p>
-                <button class="btn-1">Xoá</button>
-              </div>
-            </div>
-            <div class="row shadow my-3">
-              <div class="col-lg-4 col-md-4 col-sm-4 img-fluid my-2">
-                <img src="./img/about-2.jpg" class="img-fluid" alt="" />
-              </div>
-              <div class="col-lg-5 col-md-8 col-sm-8">
-                <h2>Trà sữa trân châu Matcha</h2>
-                <h6 class="text-muted">Số lượng: 1</h6>
-                <p>Giá: 30.000 VNĐ</p>
-                <button class="btn-1">Xoá</button>
-              </div>
-            </div>
+  <title>Giỏ hàng</title>
 
-            <!-- Tổng tiền -->
-            <div class="row my-4">
-              <h5 class="text-muted">Số lượng món : 2</h5>
-              <span class="text-dark fw-bold fs-3">Tổng tiền: 60.000 Vnđ </span>
+  
+  <style>
+    .cart-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <div class="container-fluid bg-white sticky-top">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+        <a href="index.html" class="navbar-brand">
+          <h1 class="nav-item nav-link">Milk Tea Shop</h1>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler ms-auto me-0"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link active"
+              >Trang chủ</a
+            >
+            <a href="about.html" class="nav-item nav-link">Giới thiệu</a>
+            <a href="product.html" class="nav-item nav-link">Sản phẩm</a>
+            <a href="store.html" class="nav-item nav-link">Cửa hàng</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Trang</a
+              >
+              <div class="dropdown-menu bg-light rounded-0 m-0">
+                <a href="feature.html" class="dropdown-item">Đặc trưng</a>
+                <a href="blog.html" class="dropdown-item">Bài viết </a>
+                <a href="testimonial.html" class="dropdown-item"
+                  >Lời nhận xét</a
+                >
+                <a href="GioHang.html" class="dropdown-item">Giỏ hàng</a>
+              </div>
             </div>
+            <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
           </div>
-          <!-- Ghi chú -->
-          <div class="col-lg-5 col-md-7">
-            <div class="row mt-3">
-              <div class="form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Leave a comment here"
-                  id="floatingTextarea2"
-                  style="height: 100px"
-                ></textarea>
-                <label for="floatingTextarea2" class="ms-3">Ghi chú</label>
+          <!-- Nút tìm kiếm -->
+          <div class="search border-start ps-2">
+            <input checked="" class="checkbox" type="checkbox" />
+            <div
+              class="mainbox d-flex flex-row-reverse align-items-center justify-content-center"
+            >
+              <div class="iconContainer">
+                <i class="fas fa-search search_icon"></i>
               </div>
-              <div class="row text-center">
-                <div class="col-6">
-                  <a href="store.html"
-                    ><button class="btn-1 w-100">Mua thêm</button></a
-                  >
-                </div>
-                <div class="col-6">
-                  <a href="Thanhcong.html"
-                    ><button class="btn-1 w-100">Thanh toán</button></a
-                  >
-                </div>
-              </div>
+              <input
+                class="search_input"
+                placeholder="tìm kiếm"
+                type="text"
+              />
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    </div>
+  </div>
 
-    <!-- Footer Start -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Giỏ hàng của bạn</h2>
+    <div id="cartItems"></div>
+    <hr>
+    <h4 class="text-end">Tổng tiền: <span id="totalPrice">0</span> đ</h4>
+  </div>
+
+  <!-- Footer Start -->
     <div
       class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn"
       data-wow-delay="0.1s"
@@ -239,11 +193,62 @@
     </div>
     <!-- Footer End -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  </body>
+  <script>
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartItems = document.getElementById("cartItems");
+      cartItems.innerHTML = "";
+
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        cartItems.innerHTML += `
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-2 d-flex align-items-center justify-content-center">
+                <img src="${item.image}" alt="${item.name}" class="cart-img">
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-text">Giá: ${item.price.toLocaleString()} đ</p>
+                  <div class="d-flex align-items-center">
+                    <button onclick="changeQuantity(${index}, -1)" class="btn btn-sm btn-outline-secondary me-2">-</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="changeQuantity(${index}, 1)" class="btn btn-sm btn-outline-secondary mx-2">+</button>
+                    <button onclick="removeItem(${index})" class="btn btn-sm btn-danger ms-3">Xóa</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById("totalPrice").textContent = total.toLocaleString();
+    }
+
+    function changeQuantity(index, delta) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    loadCart();
+  </script>
+</body>
 </html>
