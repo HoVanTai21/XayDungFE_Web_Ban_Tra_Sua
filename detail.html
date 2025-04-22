@@ -33,6 +33,17 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show">
+      <div id="container">
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="h3" class="fw-bold">Milk Tea</div>
+      </div>
+    </div>
+    <!-- Spinner End -->
     <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
       <div class="container-fluid">
@@ -96,51 +107,66 @@
     </div>
     <!-- Navbar End -->
     <section data-wow-delay="0.2s">
-  <div class="container shadow-sm">
-    <div class="row my-5">
-      <div
-        class="col-lg-5 col-md-5 col-sm-12 p-0 m-lg-1 text-sm-center my-md-4 ms-md-1 wow animated fadeInLeftBig"
-      >
-        <img
-          src="img/boba-tapioca-matcha.jpg"
-          id="productImage"
-          alt="Trà sữa Matcha"
-          class="img-fluid"
-        />
-      </div>
-      <div
-        class="col-lg-6 col-md-6 col-sm-12 text-center mt-lg-5 my-sm-2 wow animated zoomIn"
-        data-wow-delay="1s"
-      >
-        <h2 id="productName">Trà sữa trân châu Matcha</h2>
-        <p id="productPrice">Giá: 35.000 VNĐ</p>
-        <p id="productDesc">
-          Mô tả: Sự hòa quyện tinh tế giữa vị trà xanh Matcha thơm dịu, sữa béo ngậy và
-          những viên trân châu dẻo dai – mang đến trải nghiệm mát lạnh, ngọt ngào, khó cưỡng!
-        </p>
+      <div class="container shadow-sm">
+        <div class="row my-5">
+          <div
+            class="col-lg-5 col-md-5 col-sm-12 p-0 m-lg-1 text-sm-center my-md-4 ms-md-1 wow animated fadeInLeftBig"
+          >
+            <img
+              src="img/boba-tapioca-matcha.jpg"
+              id="productImage"
+              alt="Trà sữa Matcha"
+              class="img-fluid"
+            />
+          </div>
+          <div
+            class="col-lg-6 col-md-6 col-sm-12 text-center mt-lg-5 my-sm-2 wow animated zoomIn"
+            data-wow-delay="1s"
+          >
+            <h2 id="productName">Trà sữa trân châu Matcha</h2>
+            <p id="productPrice">Giá: 35.000 VNĐ</p>
+            <p id="productDesc">
+              Mô tả: Sự hòa quyện tinh tế giữa vị trà xanh Matcha thơm dịu, sữa
+              béo ngậy và những viên trân châu dẻo dai – mang đến trải nghiệm
+              mát lạnh, ngọt ngào, khó cưỡng!
+            </p>
 
-        <!-- Giao diện số lượng + - -->
-        <div class="mb-3 d-flex justify-content-center align-items-center">
-          <label for="quantity" class="form-label me-3 mb-0">Số lượng:</label>
-          <button class="btn btn-outline-secondary" onclick="updateQuantity(-1)">-</button>
-          <input
-            type="number"
-            id="quantity"
-            class="form-control text-center mx-2"
-            style="width: 60px"
-            min="1"
-            value="1"
-            readonly
-          />
-          <button class="btn btn-outline-secondary" onclick="updateQuantity(1)">+</button>
+            <!-- Giao diện số lượng + - -->
+            <div class="mb-3 d-flex justify-content-center align-items-center">
+              <label for="quantity" class="form-label me-3 mb-0"
+                >Số lượng:</label
+              >
+              <button
+                class="btn btn-outline-secondary"
+                onclick="updateQuantity(-1)"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                id="quantity"
+                class="form-control text-center mx-2"
+                style="width: 60px"
+                min="1"
+                value="1"
+                readonly
+              />
+              <button
+                class="btn btn-outline-secondary"
+                onclick="updateQuantity(1)"
+              >
+                +
+              </button>
+            </div>
+
+            <button id="addToCartBtn" class="btn btn-success me-2">
+              Thêm vào giỏ hàng
+            </button>
+            <a href="GioHang.html" class="btn btn-primary">Xem giỏ hàng</a>
+          </div>
         </div>
-
-        <button id="addToCartBtn" class="btn btn-success me-2">Thêm vào giỏ hàng</button>
-        <a href="GioHang.html" class="btn btn-primary">Xem giỏ hàng</a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Footer Start -->
     <div
@@ -225,6 +251,7 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
 
     <script>
       function updateQuantity(change) {
@@ -234,30 +261,33 @@
         if (quantity < 1) quantity = 1;
         quantityInput.value = quantity;
       }
-    
-      document.getElementById("addToCartBtn").addEventListener("click", function () {
-        const quantity = parseInt(document.getElementById("quantity").value);
-        const product = {
-          id: 1,
-          name: "Trà sữa trân châu Matcha",
-          price: 35000,
-          quantity: quantity,
-          image: "img/boba-tapioca-matcha.jpg",
-          description: "Sự hòa quyện tinh tế giữa vị trà xanh Matcha thơm dịu, sữa béo ngậy và những viên trân châu dẻo dai."
-        };
-    
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    
-        const index = cart.findIndex(item => item.id === product.id);
-        if (index !== -1) {
-          cart[index].quantity += quantity;
-        } else {
-          cart.push(product);
-        }
-    
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert("Đã thêm vào giỏ hàng!");
-      });
+
+      document
+        .getElementById("addToCartBtn")
+        .addEventListener("click", function () {
+          const quantity = parseInt(document.getElementById("quantity").value);
+          const product = {
+            id: 1,
+            name: "Trà sữa trân châu Matcha",
+            price: 35000,
+            quantity: quantity,
+            image: "img/boba-tapioca-matcha.jpg",
+            description:
+              "Sự hòa quyện tinh tế giữa vị trà xanh Matcha thơm dịu, sữa béo ngậy và những viên trân châu dẻo dai.",
+          };
+
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+          const index = cart.findIndex((item) => item.id === product.id);
+          if (index !== -1) {
+            cart[index].quantity += quantity;
+          } else {
+            cart.push(product);
+          }
+
+          localStorage.setItem("cart", JSON.stringify(cart));
+          alert("Đã thêm vào giỏ hàng!");
+        });
     </script>
   </body>
 </html>
